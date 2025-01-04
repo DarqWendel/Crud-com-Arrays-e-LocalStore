@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2_localStorage</title>
+</head>
+<body>
+    
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <button onclick="consultarItem()">Consultar Item</button>
+    <button onclick="deletarItem()">Deletar Item</button>
+
+   <br><br> <a href="3_localStorage.html">Outra Página</a>
+
+    <script>
+        function adicionarItem(){
+            const valor = prompt("Digite um item");
+            localStorage.setItem('DigitalItem', valor);
+            const custo = prompt("Digite o valor do item: ");
+            localStorage.setItem("DigitalPreço", custo);
+        }
+
+        function consultarItem() {
+            const valor = localStorage.getItem("DigitalItem");
+            const custo = localStorage.getItem("DigitalPreço");
+            alert("Item: " + valor +  "\nPreço: " + custo);
+        }
+
+        function deletarItem() {
+            localStorage.removeItem("DigitalItem");
+            localStorage.removeItem("DigitalPreço");
+            consultarItem();
+        }
+
+        // localStorage.setItem("DigitalToken", 'DC4585FS21');
+        // const token = localStorage.getItem('DigitalToken');
+        // console.log(token);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Criando um objeto
+        const aluno = {nome: 'Dárquio', idade: 19 };
+        // Convertendo Objeto para Texto
+        const objetoEmTexto = JSON.stringify(aluno);
+        localStorage.setItem('token', objetoEmTexto);
+        const textoEmObjeto = localStorage.getItem('token');
+        // Convertendo Texto para Objeto
+        const objeto = JSON.parse(textoEmObjeto);
+        console.log(objeto.nome);
+    </script>
+</body>
+</html>
